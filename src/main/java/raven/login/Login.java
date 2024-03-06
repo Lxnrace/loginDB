@@ -22,6 +22,7 @@ public class Login extends JPanel {
                 chRememberMe = new JCheckBox("Recuerdame");
                 cmdLogin = new JButton("Iniciar sesión");
                 cmdClear = new JButton("Limpiar");
+                cmdGoogle = new JButton("Iniciar sesión con Google");
                 JPanel panel = new JPanel(new MigLayout("wrap,fillx,insets 35 45 30 45", "fill,250:280"));
                 panel.putClientProperty(FlatClientProperties.STYLE, "" +
                                 "arc:20;" +
@@ -44,6 +45,13 @@ public class Login extends JPanel {
 
                 });
 
+                cmdGoogle.putClientProperty(FlatClientProperties.STYLE, "" +
+                                "[light]background:darken(@background,10%);" +
+                                "[dark]background:lighten(@background,10%);" +
+                                "borderWidth:0;" +
+                                "focusWidth:0;" +
+                                "innerFocusWidth:0");
+
                 cmdClear.putClientProperty(FlatClientProperties.STYLE, "" +
                                 "[light]background:darken(@background,10%);" +
                                 "[dark]background:lighten(@background,10%);" +
@@ -51,8 +59,19 @@ public class Login extends JPanel {
                                 "focusWidth:0;" +
                                 "innerFocusWidth:0");
                 cmdClear.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
                 cmdClear.addActionListener(e -> {
-                        Notifications.getInstance().show(Notifications.Type.SUCCESS,Notifications.Location.TOP_RIGHT,"Datos limpiados");
+                        if (txtPassword.getPassword().equals("")) {
+                                Notifications.getInstance().show(Notifications.Type.WARNING,
+                                                Notifications.Location.TOP_RIGHT, "Requisito: Ingresar contraseña");
+                        } else if (txtUsername.getText().equals("")) {
+                                Notifications.getInstance().show(Notifications.Type.WARNING,
+                                                Notifications.Location.TOP_RIGHT, "Requisito: Ingresar usuario");
+                        } else {
+                                Notifications.getInstance().show(Notifications.Type.SUCCESS,
+                                                Notifications.Location.TOP_RIGHT, "Datos limpiados con éxito");
+                        }
+
                 });
 
                 txtUsername.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Ingresa tu usuario");
@@ -74,6 +93,7 @@ public class Login extends JPanel {
                 panel.add(txtPassword);
                 panel.add(chRememberMe, "grow 0");
                 panel.add(cmdLogin, "gapy 10");
+                panel.add(cmdGoogle, "gapy 7");
                 panel.add(cmdClear, "gapy 7");
                 panel.add(createSignupLabel(), "gapy 10");
                 add(panel);
@@ -105,4 +125,5 @@ public class Login extends JPanel {
         private JCheckBox chRememberMe;
         private JButton cmdLogin;
         private JButton cmdClear;
+        private JButton cmdGoogle;
 }
