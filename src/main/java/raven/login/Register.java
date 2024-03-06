@@ -4,7 +4,6 @@ import com.formdev.flatlaf.FlatClientProperties;
 import net.miginfocom.swing.MigLayout;
 import raven.component.PasswordStrengthStatus;
 import raven.manager.FormsManager;
-import raven.toast.Notifications;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,9 +24,12 @@ public class Register extends JPanel {
 
         cmdRegister.addActionListener(e -> {
             if (isMatchPassword()) {
-                //  Do something here
+                //  aqui se hace alguna accion
             } else {
-                Notifications.getInstance().show(Notifications.Type.ERROR, "Passwords don't match. Try again!");
+                JOptionPane.showMessageDialog(null, "Passwords don't match. Try again!");
+                 txtPassword.setText("");
+                  txtConfirmPassword.setText("");
+                
             }
         });
         passwordStrengthStatus = new PasswordStrengthStatus();

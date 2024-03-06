@@ -7,6 +7,7 @@ import raven.login.Login;
 import raven.manager.FormsManager;
 import raven.toast.Notifications;
 
+import javax.management.Notification;
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,6 +15,8 @@ public class Application extends JFrame {
 
     public Application() {
         init();
+        Notifications.getInstance().setJFrame(this);
+        
     }
 
     private void init() {
@@ -22,7 +25,6 @@ public class Application extends JFrame {
         setSize(new Dimension(1200, 700));
         setLocationRelativeTo(null);
         setContentPane(new Login());
-        Notifications.getInstance().setJFrame(this);
         FormsManager.getInstance().initApplication(this);
     }
 
