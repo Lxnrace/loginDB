@@ -1,4 +1,4 @@
-package raven.util;
+package util;
 
 public class MethodUtil {
     public static int checkPasswordStrength(String password) {

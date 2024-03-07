@@ -1,7 +1,7 @@
-package raven.manager;
+package manager;
 
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
-import raven.main.Application;
+import main.Application;
 
 import javax.swing.*;
 import java.awt.*;

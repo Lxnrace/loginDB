@@ -1,9 +1,9 @@
-package raven.login;
+package login;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import net.miginfocom.swing.MigLayout;
-import raven.component.PasswordStrengthStatus;
-import raven.manager.FormsManager;
+import component.PasswordStrengthStatus;
+import manager.FormsManager;
 
 import javax.swing.*;
 import java.awt.*;

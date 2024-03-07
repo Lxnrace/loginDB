@@ -1,11 +1,11 @@
-package raven.component;
+package component;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.ui.FlatUIUtils;
 import com.formdev.flatlaf.util.UIScale;
 import net.miginfocom.swing.MigLayout;
-import raven.util.MethodUtil;
+import util.MethodUtil;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

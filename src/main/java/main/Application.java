@@ -1,10 +1,10 @@
-package raven.main;
+package main;
 
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import raven.login.Login;
-import raven.manager.FormsManager;
+import login.Login;
+import manager.FormsManager;
 import raven.toast.Notifications;
 
 import javax.management.Notification;

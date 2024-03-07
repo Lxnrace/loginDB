@@ -1,8 +1,8 @@
-package raven.login;
+package login;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import net.miginfocom.swing.MigLayout;
-import raven.manager.FormsManager;
+import manager.FormsManager;
 import raven.toast.Notifications;
 
 import javax.management.Notification;
