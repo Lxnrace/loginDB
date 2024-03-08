@@ -7,7 +7,6 @@ import login.Login;
 import manager.FormsManager;
 import raven.toast.Notifications;
 
-import javax.management.Notification;
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,7 +16,7 @@ public class App extends JFrame {
         init();
         Notifications.getInstance().setJFrame(this);
 
-    }
+    } 
 
     private void init() {
         setTitle("Login");

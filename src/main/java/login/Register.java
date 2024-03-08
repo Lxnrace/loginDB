@@ -7,6 +7,7 @@ import manager.FormsManager;
 
 import javax.swing.*;
 import java.awt.*;
+import raven.toast.Notifications;
 
 public class Register extends JPanel {
     public Register() {
@@ -24,7 +25,6 @@ public class Register extends JPanel {
 
         cmdRegister.addActionListener(e -> {
             if (isMatchPassword()) {
-                //  aqui se hace alguna accion
             } else {
                 JOptionPane.showMessageDialog(null, "Passwords don't match. Try again!");
                  txtPassword.setText("");
@@ -57,8 +57,8 @@ public class Register extends JPanel {
                 "focusWidth:0;" +
                 "innerFocusWidth:0");
 
-        JLabel lbTitle = new JLabel("Welcome to our Chat Application");
-        JLabel description = new JLabel("Join us to chat, connect, and make new friends. Sign up now and start chatting!");
+        JLabel lbTitle = new JLabel("Bienvenido/a al registro");
+        JLabel description = new JLabel("Registrate para inciar");
         lbTitle.putClientProperty(FlatClientProperties.STYLE, "" +
                 "font:bold +10");
         description.putClientProperty(FlatClientProperties.STYLE, "" +

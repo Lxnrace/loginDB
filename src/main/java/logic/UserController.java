@@ -19,7 +19,6 @@ public class UserController {
         List<Usuario> userList = persisControl.getUsers();
 
         for (Usuario use : userList) {
-
             if (use.getUser().equals(user)) {
                 if (use.getPassword().equals(password)) {
 
@@ -33,7 +32,6 @@ public class UserController {
 
             } else {
                 message = "Usuario no encontrado";
-                return message;
             }
 
         }
