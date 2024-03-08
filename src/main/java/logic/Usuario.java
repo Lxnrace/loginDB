@@ -15,6 +15,10 @@ public class Usuario implements Serializable {
     private String user;
     private String password;
 
+    public Usuario() {
+
+    }
+
     public Usuario(int id, String user, String password) {
         this.id = id;
         this.user = user;
@@ -44,5 +48,8 @@ public class Usuario implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    
+
 
 }
