@@ -1,4 +1,4 @@
-package main;
+package app;
 
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
@@ -11,16 +11,16 @@ import javax.management.Notification;
 import javax.swing.*;
 import java.awt.*;
 
-public class Application extends JFrame {
+public class App extends JFrame {
 
-    public Application() {
+    public App() {
         init();
         Notifications.getInstance().setJFrame(this);
-        
+
     }
 
     private void init() {
-        setTitle("FlatLaf Login");
+        setTitle("Login");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(new Dimension(1200, 700));
         setLocationRelativeTo(null);
@@ -33,6 +33,7 @@ public class Application extends JFrame {
         FlatLaf.registerCustomDefaultsSource("raven.themes");
         UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 13));
         FlatMacDarkLaf.setup();
-        EventQueue.invokeLater(() -> new Application().setVisible(true));
+        EventQueue.invokeLater(() -> new App().setVisible(true));
     }
+
 }

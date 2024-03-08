@@ -49,7 +49,7 @@ public class Login extends JPanel {
                         String password = txtPassword.getSelectedText();
                         String message = control.validarUsuario(user, password);
 
-                        Notifications.getInstance().show(Notifications.Type.SUCCESS,message);
+                        Notifications.getInstance().show(Notifications.Type.SUCCESS,String.valueOf(message));
 
                 });
 

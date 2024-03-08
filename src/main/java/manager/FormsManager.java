@@ -1,13 +1,13 @@
 package manager;
 
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
-import main.Application;
+import app.App;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class FormsManager {
-    private Application application;
+    private App application;
     private static FormsManager instance;
 
     public static FormsManager getInstance() {
@@ -21,7 +21,7 @@ public class FormsManager {
 
     }
 
-    public void initApplication(Application application) {
+    public void initApplication(App application) {
         this.application = application;
     }
 

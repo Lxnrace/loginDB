@@ -9,9 +9,8 @@ public class persistenceController {
     UsuarioJpaController usuJpa = new UsuarioJpaController();
 
     public List<Usuario> getUsers() {
-
-        return usuJpa.findUsuarioEntities();
-        //SELECT * FROM USERS
+        List<Usuario> userList = usuJpa.findUsuarioEntities();
+        return userList;
 
     }
 
